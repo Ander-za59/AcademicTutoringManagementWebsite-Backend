@@ -1,0 +1,41 @@
+{
+  "name": "academictutoringmanagementwebsite-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ander-za59/AcademicTutoringManagementWebsite-Backend.git"
+  },
+  "keywords": [],
+  "author": "Anderson Lopez <alopez-2023269@kinal.org.gt>",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/Ander-za59/AcademicTutoringManagementWebsite-Backend/issues"
+  },
+  "homepage": "https://github.com/Ander-za59/AcademicTutoringManagementWebsite-Backend#readme",
+  "dependencies": {
+    "argon2": "^0.43.1",
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
+    "express-rate-limit": "^8.0.1",
+    "express-validator": "^7.2.1",
+    "helmet": "^8.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "^6.18.0",
+    "mongoose": "^8.16.5",
+    "morgan": "^1.10.1",
+    "nodemailer": "^7.0.5",
+    "nodemon": "^3.1.10",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1"
+  }
+}
