@@ -1,0 +1,14 @@
+{
+    "builds":[
+        {
+            "src": "./idnex.js",
+            "use": "@vercel/node"
+        }
+    ],
+    "routes":[
+        {
+            "src": "/(.*)",
+            "dest": "/"
+        }
+    ]
+}
