@@ -2,7 +2,6 @@ import bcrypt from 'bcryptjs'
 import jwt from 'jsonwebtoken'
 import User from '../user/user.model.js'
 import { generarCodigoVerificacionUnico } from '../helpers/generateCode.js'
-import { sendVerificationEmail } from '../helpers/sendEmail.js'
 
 const allowedDomains = ['kinal.edu.gt', 'gmail.com']
 
@@ -34,7 +33,6 @@ export const register = async (req, res) => {
     })
 
     await newUser.save()
-    await sendVerificationEmail(email, code)
 
     res.status(201).json({ msg: 'Usuario registrado. Revisa tu correo para el código de verificación.' })
   } catch (err) {
@@ -82,8 +80,6 @@ export const resendCode = async (req, res) => {
     user.emailVerificationCode = code
     user.codeExpiresAt = expiresAt
     await user.save()
-
-    await sendVerificationEmail(email, code)
 
     res.status(200).json({ msg: 'Código reenviado correctamente' })
   } catch (err) {
