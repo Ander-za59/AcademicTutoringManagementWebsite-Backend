@@ -21,7 +21,7 @@ export const register = async (req, res) => {
     }
 
     const hashedPassword = await bcrypt.hash(password, 10)
-    const code = generateVerificationCode()
+    const code = generarCodigoVerificacionUnico()
     const expiresAt = new Date(Date.now() + 15 * 60 * 1000) // 15 minutos
 
     const newUser = new User({
